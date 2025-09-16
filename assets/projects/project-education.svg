@@ -1,0 +1,66 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="educationGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#educationGrad)" rx="12"/>
+  
+  <!-- Laptop Screen -->
+  <rect x="80" y="60" width="240" height="140" fill="#2c3e50" rx="8"/>
+  <rect x="90" y="75" width="220" height="120" fill="#ffffff" rx="4"/>
+  
+  <!-- Browser Header -->
+  <rect x="90" y="75" width="220" height="25" fill="#f8f9fa" rx="4 4 0 0"/>
+  <circle cx="105" cy="87" r="3" fill="#ff5f56"/>
+  <circle cx="118" cy="87" r="3" fill="#ffbd2e"/>
+  <circle cx="131" cy="87" r="3" fill="#27ca3f"/>
+  
+  <!-- Video Player -->
+  <rect x="110" y="110" width="120" height="70" fill="#000000" rx="4"/>
+  
+  <!-- Play Button -->
+  <polygon points="190,135 190,155 210,145" fill="#4facfe"/>
+  
+  <!-- Video Progress Bar -->
+  <rect x="115" y="170" width="110" height="3" fill="#bdc3c7" rx="1.5"/>
+  <rect x="115" y="170" width="45" height="3" fill="#4facfe" rx="1.5"/>
+  
+  <!-- Course Menu -->
+  <rect x="250" y="110" width="50" height="8" fill="#ecf0f1" rx="2"/>
+  <rect x="250" y="125" width="40" height="8" fill="#ecf0f1" rx="2"/>
+  <rect x="250" y="140" width="45" height="8" fill="#4facfe" rx="2"/>
+  <rect x="250" y="155" width="35" height="8" fill="#ecf0f1" rx="2"/>
+  <rect x="250" y="170" width="42" height="8" fill="#ecf0f1" rx="2"/>
+  
+  <!-- Laptop Base -->
+  <ellipse cx="200" cy="205" rx="130" ry="8" fill="#34495e"/>
+  
+  <!-- Books Stack -->
+  <rect x="30" y="180" width="40" height="6" fill="#e74c3c" rx="1"/>
+  <rect x="32" y="174" width="36" height="6" fill="#3498db" rx="1"/>
+  <rect x="34" y="168" width="32" height="6" fill="#2ecc71" rx="1"/>
+  
+  <!-- Graduation Cap -->
+  <g transform="translate(330, 80)">
+    <rect x="0" y="10" width="30" height="3" fill="rgba(255,255,255,0.4)" rx="1.5"/>
+    <polygon points="15,0 5,10 25,10" fill="rgba(255,255,255,0.4)"/>
+    <rect x="22" y="10" width="2" height="15" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="23" cy="25" r="2" fill="rgba(255,255,255,0.3)"/>
+  </g>
+  
+  <!-- Certificate Icon -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="25" height="20" fill="rgba(255,255,255,0.3)" rx="2"/>
+    <circle cx="20" cy="15" r="8" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <polygon points="20,10 17,15 20,20 23,15" fill="rgba(255,255,255,0.4)"/>
+  </g>
+  
+  <!-- Progress Indicators -->
+  <circle cx="350" cy="150" r="4" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="360" cy="160" r="3" fill="rgba(255,255,255,0.25)"/>
+  <circle cx="340" cy="170" r="3" fill="rgba(255,255,255,0.25)"/>
+</svg>

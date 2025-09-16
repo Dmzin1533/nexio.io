@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <path d="M10 10 L30 10 L30 30 L10 30 Z" fill="none" stroke="#000000" stroke-width="2"/>
+  <text x="40" y="27" font-family="Arial" font-weight="bold" font-size="24" fill="#000000">NEXIO</text>
+</svg>

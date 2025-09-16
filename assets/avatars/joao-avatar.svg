@@ -1,0 +1,64 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="60" fill="#f0f0f0"/>
+  
+  <!-- Gradient background -->
+  <defs>
+    <linearGradient id="joaoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skinGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with gradient -->
+  <circle cx="60" cy="60" r="60" fill="url(#joaoGradient)"/>
+  
+  <!-- Face -->
+  <circle cx="60" cy="45" r="18" fill="url(#skinGradient2)"/>
+  
+  <!-- Hair -->
+  <path d="M42 35 Q50 28 60 30 Q70 28 78 35 Q75 32 60 30 Q45 32 42 35" fill="#92400e"/>
+  <path d="M45 32 Q60 25 75 32 Q72 28 60 27 Q48 28 45 32" fill="#a16207"/>
+  
+  <!-- Eyes -->
+  <circle cx="54" cy="42" r="2" fill="#1f2937"/>
+  <circle cx="66" cy="42" r="2" fill="#1f2937"/>
+  <circle cx="54.5" cy="41.5" r="0.5" fill="white"/>
+  <circle cx="66.5" cy="41.5" r="0.5" fill="white"/>
+  
+  <!-- Glasses -->
+  <circle cx="54" cy="42" r="6" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+  <circle cx="66" cy="42" r="6" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+  <path d="M60 42 L60 42" stroke="#1f2937" stroke-width="1.5"/>
+  
+  <!-- Nose -->
+  <path d="M60 45 L58 48 L62 48 Z" fill="#f97316" opacity="0.6"/>
+  
+  <!-- Mouth -->
+  <path d="M56 50 Q60 53 64 50" stroke="#1f2937" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Beard -->
+  <path d="M50 52 Q60 58 70 52 Q68 56 60 58 Q52 56 50 52" fill="#92400e" opacity="0.8"/>
+  
+  <!-- Body/Shirt -->
+  <path d="M35 75 Q35 65 45 63 L75 63 Q85 65 85 75 L85 120 L35 120 Z" fill="#374151"/>
+  
+  <!-- Collar -->
+  <path d="M45 63 L60 70 L75 63 L75 68 L60 75 L45 68 Z" fill="white"/>
+  
+  <!-- Tie -->
+  <path d="M58 70 L62 70 L64 85 L60 90 L56 85 Z" fill="#059669"/>
+  <path d="M58 72 L62 72 L62 76 L58 76 Z" fill="white" opacity="0.3"/>
+  <path d="M58 78 L62 78 L62 82 L58 82 Z" fill="white" opacity="0.3"/>
+  
+  <!-- Shoulders -->
+  <ellipse cx="60" cy="75" rx="25" ry="12" fill="#4b5563"/>
+  
+  <!-- Professional badge/pin -->
+  <circle cx="70" cy="68" r="3" fill="#059669"/>
+  <text x="70" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="2" fill="white">CTO</text>
+</svg>

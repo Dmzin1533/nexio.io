@@ -1,26 +1,227 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* Branco */
+  --foreground: #1a1a1a; /* Preto mais suave */
+  --accent: #007acc; /* Azul para melhor contraste */
+  --card-bg: #f8f9fa; /* Cinza muito claro */
+  --section-bg: #f5f7fa; /* Fundo alternativo para seções com mais contraste */
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --logo-filter: invert(0);
+  --border: rgba(0, 0, 0, 0.18); /* Borda mais visível */
+  --border-light: rgba(0, 0, 0, 0.12); /* Borda sutil mais visível */
+  --separator-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.05) 100%);
+  --separator-accent: rgba(0, 0, 0, 0.18);
+  --shadow-light: rgba(0, 0, 0, 0.12);
+  --shadow-medium: rgba(0, 0, 0, 0.20);
+  --tooltip-bg: #000000; /* Tooltip preto no modo claro */
+  --tooltip-text: #ffffff; /* Texto branco no tooltip */
+  --tech-glow: rgba(0, 122, 204, 0.3); /* Brilho azul para tecnologias */
+
+}
+
+.dark {
+  --background: #121212; /* Fundo escuro */
+  --foreground: #ffffff; /* Texto branco */
+  --accent: #c0c0c0; /* Prata */
+  --card-bg: #1e1e1e;
+  --section-bg: #181818; /* Fundo alternativo para seções */
+  --header-bg: rgba(18, 18, 18, 0.95);
+  --logo-filter: invert(1);
+  --border: rgba(255, 255, 255, 0.15); /* Borda mais visível */
+  --border-light: rgba(255, 255, 255, 0.08); /* Borda sutil */
+  --separator-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0.05) 100%);
+  --separator-accent: rgba(255, 255, 255, 0.18);
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+  --tooltip-bg: #ffffff; /* Tooltip branco no modo escuro */
+  --tooltip-text: #000000; /* Texto preto no tooltip */
+  --tech-glow: rgba(192, 192, 192, 0.4); /* Brilho prateado para tecnologias */
+
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animações Temáticas da Nexio */
+@keyframes codeFlow {
+  0% { transform: translateX(-100px); opacity: 0; }
+  25% { opacity: 1; }
+  50% { transform: translateX(0px); }
+  75% { opacity: 1; }
+  100% { transform: translateX(100px); opacity: 0; }
+}
+
+@keyframes dataTransfer {
+  0% { transform: translateX(-60px) scale(0.5); opacity: 0; }
+  20% { opacity: 1; transform: translateX(-30px) scale(0.8); }
+  50% { transform: translateX(0px) scale(1); }
+  80% { transform: translateX(30px) scale(0.8); }
+  100% { transform: translateX(60px) scale(0.5); opacity: 0; }
+}
+
+@keyframes networkPulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; box-shadow: 0 0 0 0 var(--separator-accent); }
+  50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 0 10px transparent; }
+}
+
+@keyframes loadingProgress {
+  0% { width: 0%; opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { width: 100%; opacity: 0.6; }
+}
+
+@keyframes deployAnimation {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+  25% { transform: translateY(-10px) rotate(90deg); opacity: 1; }
+  50% { transform: translateY(0px) rotate(180deg); }
+  75% { transform: translateY(-5px) rotate(270deg); }
+  100% { transform: translateY(0px) rotate(360deg); opacity: 0.7; }
+}
+
+@keyframes digitalSignal {
+  0% { height: 2px; opacity: 0.3; }
+  25% { height: 8px; opacity: 1; }
+  50% { height: 4px; opacity: 0.7; }
+  75% { height: 12px; opacity: 1; }
+  100% { height: 2px; opacity: 0.3; }
+}
+
+/* Animações de scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* SplitText Styles */
+.split-char,
+.split-word,
+.split-line {
+  color: var(--foreground);
+  display: inline-block;
+}
+
+.split-char {
+  transform-origin: center bottom;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-left {
+  animation: fadeInLeft 0.6s ease forwards;
+}
+
+.animate-fade-right {
+  animation: fadeInRight 0.6s ease forwards;
+}
+
+/* Estilos para tema escuro */
+.dark header {
+  background-color: var(--header-bg);
+}
+
+.dark .card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Transições suaves para mudança de tema */
+body, header, .card, button, a {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+/* Animação bounce-in para botão WhatsApp */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-180deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotate(-90deg);
+  }
+  70% {
+    transform: scale(0.9) rotate(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Animação para feedback pulse */
+@keyframes feedbackPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }

@@ -1,0 +1,66 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1810;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4a2c1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0f08;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="boarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+  
+  <!-- Boar silhouette -->
+  <g transform="translate(200,150)">
+    <!-- Body -->
+    <ellipse cx="0" cy="10" rx="80" ry="45" fill="url(#boarGradient)"/>
+    
+    <!-- Head -->
+    <ellipse cx="-60" cy="-10" rx="35" ry="30" fill="url(#boarGradient)"/>
+    
+    <!-- Snout -->
+    <ellipse cx="-85" cy="-5" rx="15" ry="12" fill="#654321"/>
+    
+    <!-- Tusks -->
+    <path d="M -95 -8 Q -100 -15 -98 -20" stroke="#F5F5DC" stroke-width="3" fill="none"/>
+    <path d="M -95 -2 Q -100 5 -98 10" stroke="#F5F5DC" stroke-width="3" fill="none"/>
+    
+    <!-- Eye -->
+    <circle cx="-70" cy="-15" r="4" fill="#FF4500"/>
+    <circle cx="-68" cy="-17" r="1.5" fill="#FFFFFF"/>
+    
+    <!-- Ears -->
+    <ellipse cx="-45" cy="-25" rx="8" ry="15" fill="#654321" transform="rotate(-30 -45 -25)"/>
+    <ellipse cx="-35" cy="-30" rx="8" ry="15" fill="#654321" transform="rotate(30 -35 -30)"/>
+    
+    <!-- Legs -->
+    <rect x="-50" y="45" width="8" height="25" fill="#654321"/>
+    <rect x="-30" y="45" width="8" height="25" fill="#654321"/>
+    <rect x="20" y="45" width="8" height="25" fill="#654321"/>
+    <rect x="40" y="45" width="8" height="25" fill="#654321"/>
+    
+    <!-- Tail -->
+    <path d="M 75 5 Q 90 -5 85 -15" stroke="#654321" stroke-width="6" fill="none"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" fill="#D2691E" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+    JAVALI SELVAGEM
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="200" y="75" text-anchor="middle" fill="#F4A460" font-family="Arial, sans-serif" font-size="14">
+    E-commerce Premium
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="100" r="3" fill="#D2691E" opacity="0.6"/>
+  <circle cx="350" cy="200" r="4" fill="#D2691E" opacity="0.4"/>
+  <circle cx="80" cy="250" r="2" fill="#F4A460" opacity="0.8"/>
+  <circle cx="320" cy="80" r="3" fill="#F4A460" opacity="0.5"/>
+</svg>

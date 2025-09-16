@@ -1,0 +1,78 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="scheduleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa726;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#scheduleGrad)" rx="12"/>
+  
+  <!-- Calendar Base -->
+  <rect x="80" y="50" width="240" height="150" fill="#ffffff" rx="8"/>
+  
+  <!-- Calendar Header -->
+  <rect x="80" y="50" width="240" height="30" fill="#ff6b6b" rx="8 8 0 0"/>
+  <text x="200" y="70" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Dezembro 2024</text>
+  
+  <!-- Navigation Arrows -->
+  <polygon points="95,60 105,65 95,70" fill="white"/>
+  <polygon points="305,60 295,65 305,70" fill="white"/>
+  
+  <!-- Days of Week -->
+  <text x="100" y="100" font-family="Arial" font-size="10" fill="#666">D</text>
+  <text x="130" y="100" font-family="Arial" font-size="10" fill="#666">S</text>
+  <text x="160" y="100" font-family="Arial" font-size="10" fill="#666">T</text>
+  <text x="190" y="100" font-family="Arial" font-size="10" fill="#666">Q</text>
+  <text x="220" y="100" font-family="Arial" font-size="10" fill="#666">Q</text>
+  <text x="250" y="100" font-family="Arial" font-size="10" fill="#666">S</text>
+  <text x="280" y="100" font-family="Arial" font-size="10" fill="#666">S</text>
+  
+  <!-- Calendar Grid -->
+  <g font-family="Arial" font-size="12" fill="#333">
+    <!-- Week 1 -->
+    <text x="100" y="125">1</text>
+    <text x="130" y="125">2</text>
+    <text x="160" y="125">3</text>
+    <text x="190" y="125">4</text>
+    <text x="220" y="125">5</text>
+    <text x="250" y="125">6</text>
+    <text x="280" y="125">7</text>
+    
+    <!-- Week 2 -->
+    <text x="100" y="145">8</text>
+    <text x="130" y="145">9</text>
+    <text x="160" y="145">10</text>
+    <text x="190" y="145">11</text>
+    <text x="220" y="145">12</text>
+    <text x="250" y="145">13</text>
+    <text x="280" y="145">14</text>
+    
+    <!-- Week 3 -->
+    <text x="100" y="165">15</text>
+    <text x="130" y="165">16</text>
+    <text x="160" y="165">17</text>
+    <text x="190" y="165">18</text>
+    <text x="220" y="165">19</text>
+    <text x="250" y="165">20</text>
+    <text x="280" y="165">21</text>
+  </g>
+  
+  <!-- Highlighted Appointments -->
+  <circle cx="160" cy="120" r="8" fill="#ff6b6b" opacity="0.7"/>
+  <circle cx="220" cy="140" r="8" fill="#4caf50" opacity="0.7"/>
+  <circle cx="190" cy="160" r="8" fill="#2196f3" opacity="0.7"/>
+  
+  <!-- Clock Icon -->
+  <circle cx="50" cy="120" r="20" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="50" cy="120" r="15" fill="none" stroke="white" stroke-width="2"/>
+  <line x1="50" y1="120" x2="50" y2="110" stroke="white" stroke-width="2"/>
+  <line x1="50" y1="120" x2="58" y2="120" stroke="white" stroke-width="1.5"/>
+  
+  <!-- Notification Bell -->
+  <g transform="translate(340, 100)">
+    <path d="M10 5 C10 2 8 0 5 0 C2 0 0 2 0 5 L0 10 C0 12 2 14 5 14 C8 14 10 12 10 10 L10 5 Z" fill="rgba(255,255,255,0.4)"/>
+    <rect x="2" y="14" width="6" height="2" rx="1" fill="rgba(255,255,255,0.4)"/>
+  </g>
+</svg>

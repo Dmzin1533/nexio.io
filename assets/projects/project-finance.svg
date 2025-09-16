@@ -1,0 +1,46 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="financeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#financeGrad)" rx="12"/>
+  
+  <!-- Mobile Phone Frame -->
+  <rect x="150" y="30" width="100" height="190" fill="#2c3e50" rx="15"/>
+  <rect x="160" y="45" width="80" height="160" fill="#ffffff" rx="8"/>
+  
+  <!-- Status Bar -->
+  <rect x="160" y="45" width="80" height="15" fill="#f8f9fa" rx="8 8 0 0"/>
+  <text x="200" y="55" text-anchor="middle" font-family="Arial" font-size="8" fill="#666">9:41</text>
+  
+  <!-- App Header -->
+  <rect x="160" y="60" width="80" height="20" fill="#11998e"/>
+  <text x="200" y="73" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">FinanceApp</text>
+  
+  <!-- Balance Card -->
+  <rect x="170" y="90" width="60" height="30" fill="#2ecc71" rx="6"/>
+  <text x="200" y="102" text-anchor="middle" font-family="Arial" font-size="8" fill="white">Saldo Total</text>
+  <text x="200" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">R$ 5.420,00</text>
+  
+  <!-- Chart Area -->
+  <rect x="170" y="130" width="60" height="40" fill="#ecf0f1" rx="4"/>
+  
+  <!-- Simple Chart Lines -->
+  <polyline points="175,160 185,150 195,145 205,140 215,135 225,130" 
+            fill="none" stroke="#11998e" stroke-width="2"/>
+  <polyline points="175,165 185,160 195,155 205,150 215,145 225,140" 
+            fill="none" stroke="#e74c3c" stroke-width="2"/>
+  
+  <!-- Transaction List -->
+  <rect x="170" y="180" width="60" height="8" fill="#bdc3c7" rx="2"/>
+  <rect x="170" y="192" width="45" height="8" fill="#bdc3c7" rx="2"/>
+  
+  <!-- Dollar Signs -->
+  <text x="120" y="80" font-family="Arial" font-size="24" fill="rgba(255,255,255,0.3)">$</text>
+  <text x="290" y="120" font-family="Arial" font-size="20" fill="rgba(255,255,255,0.2)">$</text>
+  <text x="80" y="180" font-family="Arial" font-size="18" fill="rgba(255,255,255,0.25)">$</text>
+</svg>
