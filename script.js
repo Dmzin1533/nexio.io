@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollAnimations();
     initializeHeader();
     initializeMobileMenu();
-    initializeFeedbackForm();
     initializeWhatsAppButton();
     initializeCEOCards();
     initializeSmoothScrolling();
-    loadComments();
     
     // Initialize Projects Carousel
     new ProjectsCarousel();
@@ -20,17 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Sistema de tema
 function initializeTheme() {
+    // Força modo escuro como padrão e remove capacidade de alternância
+    document.body.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+
     const themeToggle = document.getElementById('theme-toggle');
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    
-    // Aplicar tema salvo
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark');
-        updateThemeIcon(true);
+    if (themeToggle) {
+        // Oculta o botão de alternância de tema
+        themeToggle.style.display = 'none';
+        // Remove quaisquer listeners existentes para garantir que não haja alternância
+        themeToggle.replaceWith(themeToggle.cloneNode(true));
     }
-    
-    // Event listener para toggle de tema
-    themeToggle.addEventListener('click', toggleTheme);
 }
 
 function toggleTheme() {
@@ -150,8 +148,13 @@ function initializeSmoothScrolling() {
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            // Permite navegação normal para links externos/arquivos (ex.: login.html)
+            if (!href || !href.startsWith('#')) {
+                return; // não impedir comportamento padrão
+            }
             e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
@@ -336,7 +339,7 @@ function escapeHtml(text) {
 // Botão flutuante do WhatsApp
 function initializeWhatsAppButton() {
     const whatsappBtns = document.querySelectorAll('.whatsapp-btn, .whatsapp-btn-float');
-    const whatsappNumber = '5511999999999'; // Substitua pelo número real
+    const whatsappNumber = '5586994863989';
     
     whatsappBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -541,7 +544,8 @@ const nexioFunctions = {
     },
     
     openWhatsApp: () => {
-        window.open('https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da Nexio.', '_blank');
+        const message = encodeURIComponent('Olá! Gostaria de saber mais sobre os serviços da Nexio.');
+        window.open(`https://wa.me/5586994863989?text=${message}`, '_blank');
     },
     
     sendEmail: () => {
@@ -624,3 +628,5 @@ class ProjectsCarousel {
 
 // Exportar funções para uso global
 window.nexioFunctions = nexioFunctions;
+// Alias global para compatibilidade com onclick="openWhatsApp()" no HTML
+window.openWhatsApp = nexioFunctions.openWhatsApp;

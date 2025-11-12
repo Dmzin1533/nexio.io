@@ -124,7 +124,7 @@ const Header = () => {
                 { label: 'Contato', href: '#contact' }
               ]}
               socialItems={[
-                { label: 'Instagram', href: 'https://instagram.com/nexio', icon: 'instagram' },
+                { label: 'Instagram', href: 'https://www.instagram.com/nexio.io/', icon: 'instagram' },
                 { label: 'LinkedIn', href: 'https://linkedin.com/company/nexio', icon: 'linkedin' },
                 { label: 'GitHub', href: 'https://github.com/nexio', icon: 'github' }
               ]}

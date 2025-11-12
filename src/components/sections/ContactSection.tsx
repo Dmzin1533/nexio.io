@@ -2,7 +2,8 @@
 
 const ContactSection = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5500000000000', '_blank');
+    const message = encodeURIComponent('Olá! Gostaria de saber mais sobre os serviços da Nexio.');
+    window.open(`https://wa.me/5586994863989?text=${message}`, '_blank');
   };
 
   return (

@@ -6,7 +6,7 @@
     <title>Nexio - Soluções Digitais Inovadoras</title>
     <meta name="description" content="Transformando ideias em soluções digitais inovadoras">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="public/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="public/nexio-logo.svg">
 </head>
 <body>
     <!-- Header -->
@@ -42,6 +42,8 @@
                     <a href="#projects" class="nav-link">Projetos</a>
                     <a href="#feedback" class="nav-link">Feedback</a>
                     <a href="#contact" class="nav-link">Contato</a>
+                    <a href="admin.html" class="nav-link" id="nav-admin" style="display:none">Admin</a>
+                    <a href="#login" class="nav-link" id="login-nav">Login</a>
                 </nav>
                 
                 <!-- Theme Toggle -->
@@ -73,6 +75,8 @@
                 <a href="#projects" class="mobile-nav-link">Projetos</a>
                 <a href="#feedback" class="mobile-nav-link">Feedback</a>
                 <a href="#contact" class="mobile-nav-link">Contato</a>
+                <a href="admin.html" class="mobile-nav-link" id="nav-admin-mobile" style="display:none">Admin</a>
+                <a href="#login" class="mobile-nav-link" id="login-nav-mobile">Login</a>
             </nav>
         </div>
     </header>
@@ -160,7 +164,6 @@
 
         <!-- Network Pulse Separator -->
         <div class="separator network-pulse">
-            <div class="separator-bg"></div>
             <div class="network-line"></div>
             <div class="network-node" style="animation-delay: 0s"></div>
             <div class="network-node center" style="animation-delay: 0.7s"></div>
@@ -169,8 +172,8 @@
             <div class="connectivity-indicator right"></div>
         </div>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
+        <!-- Projects Section (Hiatus) -->
+        <section id="projects" class="projects-section hiatus">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Nossos Projetos</h2>
                 <div class="projects-carousel-container">
@@ -239,18 +242,7 @@
             </div>
         </section>
 
-        <!-- Feedback Flow Separator -->
-        <div class="separator feedback-flow">
-            <div class="separator-bg"></div>
-            <div class="feedback-line"></div>
-            <div class="feedback-pulse" style="animation-delay: 0s"></div>
-            <div class="feedback-pulse" style="animation-delay: 0.5s"></div>
-            <div class="feedback-pulse center" style="animation-delay: 1s"></div>
-            <div class="feedback-pulse" style="animation-delay: 1.5s"></div>
-            <div class="feedback-pulse" style="animation-delay: 0.3s"></div>
-            <div class="feedback-icon left">💭</div>
-            <div class="feedback-icon right">⭐</div>
-        </div>
+        
 
         <!-- Feedback Section -->
         <section id="feedback" class="feedback-section">
@@ -292,6 +284,74 @@
             </div>
         </section>
 
+        <!-- Trabalhe Conosco Separator -->
+        <div class="separator digital-communication">
+            <div class="separator-bg"></div>
+            <div class="communication-line"></div>
+            <div class="digital-signal" style="animation-delay: 0s"></div>
+            <div class="digital-signal" style="animation-delay: 0.3s"></div>
+            <div class="digital-signal center" style="animation-delay: 0.6s"></div>
+            <div class="digital-signal" style="animation-delay: 0.9s"></div>
+            <div class="digital-signal" style="animation-delay: 1.2s"></div>
+            <div class="communication-indicator left">TX</div>
+            <div class="communication-indicator right">RX</div>
+        </div>
+
+        <!-- Trabalhe Conosco Section -->
+        <section id="work" class="work-section">
+            <div class="container">
+                <div class="work-header">
+                    <h2 class="section-title animate-on-scroll">Trabalhe Conosco</h2>
+                    <p class="work-subtitle animate-on-scroll">Envie seu perfil e currículo para oportunidades sob demanda.</p>
+                </div>
+
+                <div class="work-grid">
+                  <div class="work-form-container animate-on-scroll">
+                    <form id="work-form" class="work-form">
+                        <div class="form-group">
+                            <label for="candidate-name" class="form-label">Nome</label>
+                            <input type="text" id="candidate-name" name="candidate-name" class="form-input" placeholder="Seu nome" maxlength="100" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="candidate-role" class="form-label">Função</label>
+                            <select id="candidate-role" name="candidate-role" class="form-select" required>
+                                <option value="">Selecione uma função</option>
+                                <option value="frontend">Frontend</option>
+                                <option value="backend">Backend</option>
+                                <option value="fullstack">Full Stack</option>
+                                <option value="devops">DevOps</option>
+                                <option value="qa">QA / Testes</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="candidate-techs" class="form-label">Tecnologias</label>
+                            <input type="text" id="candidate-techs" name="candidate-techs" class="form-input" placeholder="Ex.: node.js, react, typescript" maxlength="200" required>
+                            <small class="form-hint">Separe por vírgulas</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="candidate-bio" class="form-label">Descrição</label>
+                            <textarea id="candidate-bio" name="candidate-bio" class="form-textarea" rows="4" placeholder="Conte brevemente sua experiência e projetos" maxlength="1000" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="candidate-portfolio" class="form-label">Link do Portfólio</label>
+                            <input type="url" id="candidate-portfolio" name="candidate-portfolio" class="form-input" placeholder="https://meuportfolio.com" required>
+                            <small class="form-hint">Cole a URL do seu site/portfólio (http/https)</small>
+                        </div>
+
+                        <div id="work-message" class="form-message" style="display:none"></div>
+                        <button type="submit" class="submit-btn" id="work-submit-btn">Enviar Candidatura</button>
+                    </form>
+                  </div>
+
+                
+              </div>
+            </div>
+        </section>
+
         <!-- Digital Communication Separator -->
         <div class="separator digital-communication">
             <div class="separator-bg"></div>
@@ -327,12 +387,32 @@
         <div class="container">
             <div class="footer-content animate-on-scroll">
                 <div class="footer-brand animate-on-scroll">
-                    <a href="#home" class="footer-logo animate-on-scroll">NEXIO</a>
+                    <a href="#home" class="footer-logo animate-on-scroll">
+                        <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                            <circle cx="20" cy="20" r="19" fill="var(--logo-fill-color)" stroke="var(--logo-border-color)" stroke-width="1"/>
+                            <defs>
+                              <linearGradient id="nGradientDark" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                <stop offset="30%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                                <stop offset="70%" style="stop-color:#a0a0a0;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
+                              </linearGradient>
+                              <linearGradient id="nGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#404040;stop-opacity:1" />
+                                <stop offset="30%" style="stop-color:#303030;stop-opacity:1" />
+                                <stop offset="70%" style="stop-color:#202020;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M11 29V11h3.5l9 13.5V11h3.5v18h-3.5l-9-13.5V29H11z" fill="var(--logo-gradient)" stroke="none"/>
+                        </svg>
+                        <span>NEXIO</span>
+                    </a>
                     <p class="footer-copyright animate-on-scroll">© 2024 Nexio. Todos os direitos reservados.</p>
                 </div>
                 
-                <div class="footer-social animate-on-scroll">
-                    <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/nexio.io/" target="_blank" class="social-link" aria-label="Instagram">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -347,8 +427,14 @@
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
                     </a>
+
+                    <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
                     
-                    <a href="https://wa.me/5500000000000" target="_blank" class="social-link" aria-label="WhatsApp">
+                    <a href="https://wa.me/5586994863989" target="_blank" class="social-link" aria-label="WhatsApp">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                         </svg>
@@ -368,5 +454,39 @@
     </div>
 
     <script src="script.js"></script>
-</body>
+    <script type="module" src="./jobs.js"></script>
+    
+    <!-- Painel de Login Embutido -->
+    <div id="login-modal" class="modal-overlay" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <button class="modal-close" id="login-close" aria-label="Fechar">×</button>
+        <h2 id="login-title" class="section-title">Login</h2>
+        <p class="login-subtitle">Use seu e-mail e senha, ou crie uma conta.</p>
+        <form id="login-panel-form" class="login-form">
+          <div class="form-group">
+            <label for="panel-email" class="form-label">E-mail</label>
+            <input type="email" id="panel-email" class="form-input" placeholder="seuemail@exemplo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="panel-password" class="form-label">Senha</label>
+            <input type="password" id="panel-password" class="form-input" placeholder="Sua senha" required>
+          </div>
+          <div class="form-group" id="panel-name-group" hidden>
+            <label for="panel-name" class="form-label">Nome (para mostrar nos feedbacks)</label>
+            <input type="text" id="panel-name" class="form-input" placeholder="Seu nome público" maxlength="100">
+          </div>
+          <div class="login-actions">
+            <button type="submit" id="panel-btn-login" class="submit-btn">Entrar</button>
+            <button type="button" id="panel-btn-register" class="secondary-btn">Criar Conta</button>
+          </div>
+          <div id="panel-message" class="form-message" style="display:none"></div>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Integração Firebase/Auth e Feedback -->
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="feedback.js"></script>
+    <script type="module" src="login-panel.js"></script>
+  </body>
 </html>

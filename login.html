@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nexio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="public/favicon.ico">
+</head>
+<body>
+    <header id="header" class="simple-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html#home" class="logo">NEXIO</a>
+                <nav class="desktop-nav">
+                    <a href="index.html#home" class="nav-link">Início</a>
+                    <a href="index.html#about" class="nav-link">Sobre</a>
+                    <a href="index.html#ceos" class="nav-link">CEOs</a>
+                    <a href="index.html#feedback" class="nav-link">Feedback</a>
+                    <a href="index.html#contact" class="nav-link">Contato</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+                <h1 class="section-title">Entrar na Nexio</h1>
+                <p class="login-subtitle">Use seu e-mail e senha para acessar.</p>
+
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="login-email" class="form-label">E-mail</label>
+                        <input type="email" id="login-email" class="form-input" placeholder="seuemail@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password" class="form-label">Senha</label>
+                        <input type="password" id="login-password" class="form-input" placeholder="Sua senha" required>
+                    </div>
+
+                    <div class="login-actions">
+                        <button type="submit" id="btn-login" class="submit-btn">Entrar</button>
+                        <button type="button" id="btn-register" class="secondary-btn">Criar Conta</button>
+                    </div>
+
+                    <div id="login-message" class="form-message" style="display:none"></div>
+                </form>
+
+                <p class="login-help">Dica: você pode criar uma conta rapidamente e usar o mesmo e-mail para entrar.</p>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>

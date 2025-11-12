@@ -22,6 +22,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nexio - Soluções Digitais Inovadoras",
   description: "Transformando ideias em soluções digitais inovadoras",
+  icons: {
+    icon: "/nexio-logo.svg",
+  },
 };
 
 export default function RootLayout({
